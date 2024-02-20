@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | Invoice app</title>
+</head>
+<body>
+  <div id="conteiner-nova-fatura">
+    <div id="criar-nova-fatura">
+      <div id="conteudo-nova-fatura">
+        <h2>New Invoice</h2>
+        <form>
+          <div id="conta-de">
+            <legend>Bill From</legend>
+            <div class="label-input-criar-fatura">
+              <label for="text">Street Address</label>
+              <input type="text" id="address">
+            </div>
+
+            <div class="trio-endereco">
+              <div class="label-input-criar-fatura">
+                <label for="text">City</label>
+                <input type="text" id="city">
+              </div>
+              <div class="label-input-criar-fatura">
+                <label for="text">Post Code</label>
+                <input type="text" id="postalCode">
+              </div>
+              <div class="label-input-criar-fatura">
+                <label for="text">Country</label>
+                <input type="text" id="country">
+              </div>
+            </div>
+          </div>
+
+          <div id="conta-para">
+            <legend>Bill To</legend>
+            <div class="label-input-criar-fatura">
+              <label for="text">Client's Name</label>
+              <input type="text" id="name">
+            </div>
+            <div class="label-input-criar-fatura">
+              <label for="email">Client's Email</label>
+              <input type="email" id="email" placeholder="email@example.com">
+            </div>
+            <div class="label-input-criar-fatura">
+              <label for="text">Street Address</label>
+              <input type="text" id="address">
+            </div>
+            <div class="trio-endereco">
+              <div class="label-input-criar-fatura">
+                <label for="text">City</label>
+                <input type="text" id="city">
+              </div>
+              <div class="label-input-criar-fatura">
+                <label for="text">Post Code</label>
+                <input type="text" id="postalCode">
+              </div>
+              <div class="label-input-criar-fatura">
+                <label for="text">Country</label>
+                <input type="text" id="country">
+              </div>
+            </div>
+            <div class="duo-preenchimento">
+              <div class="label-input-criar-fatura">
+                <label for="text">Invoice Date</label>
+                <input type="date" id="date">
+              </div>
+              <div class="label-input-criar-fatura">
+                <label for="text">Payment Terms</label>
+                <select name="select" id="payment-terms">
+                  <option value="1">Net 1 days</option>
+                  <option value="7">Net 7 days</option>
+                  <option value="14">Net 14 days</option>
+                  <option value="30">Net 30 days</option>
+                </select>
+              </div>
+            </div>
+            <div class="label-input-criar-fatura">
+              <label for="text">Project Description</label>
+              <input type="text" placeholder="e.g. Graphic Design Service">
+            </div>
+          </div>
+
+          <div id="conteiner-lista-item">
+            <div id="lista-items">
+              <h3>Item List</h3>
+              <div class="titulo-lista-item">
+                  <h5 class="nome-item">Item Name</h5>
+                  <h5 class="quantidade-item">Qty.</h5>
+                  <h5 class="preco-item">Price</h5>
+                  <h5 class="valor-total-item">Total</h5>
+              </div>
+            </div>
+            <button id="button-add-novo-item" type="button">
+              <img src="assets/icon-plus.svg" style="height: 8px;">
+              Add New Item
+            </button>
+          </div>
+          <div id="conteiner-final-formulario">
+            <div class="botoes-final-form">
+              <button id="botao-discard" type="button">Discard</button>
+              <div class="botoes-save">
+                <button id="save-draft" type="submit">Save as Draft</button>
+                <button id="save-send" type="submit">Save & Send</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <aside>
+      <div id="logo">
+        <img src="assets/logo.svg">
+        <div class="sub-background"></div>
+      </div>
+      <div id="side-bot">
+        <img src="assets/icon-moon.svg" alt="icon-moon">
+        <div class="img-usuario">
+          <img src="assets/image-avatar.jpg">
+        </div>
+      </div>
+    </aside>
+  <main>
+    <div id="conteudo-top">
+      <div class="conteudo-top-esquerdo">
+        <h2>Invoices</h2>
+        <h6 id="qtd-invoices">No invoices</h6>
+      </div>
+
+      <div class="conteudo-top-direito">
+        <div class="filtro">
+          <div class="status-filtro">
+            <h5>Filter by status</h5>
+            <img src="assets/icon-arrow-down.svg" class="icon-arrow">
+          </div>
+          <div class="lista-filtros">
+           <div id="draft">
+            <input type="checkbox" name="draft" id="draft">
+            <label for="draft">Draft</label>
+           </div> 
+           <div id="pending">
+            <input type="checkbox" name="pending" id="pending">
+            <label for="pending">Pending</label>
+           </div> 
+           <div id="paid">
+            <input type="checkbox" name="paid" id="paid">
+            <label for="paid">Paid</label>
+           </div> 
+          </div>
+        </div>
+        <button class="nova-fatura">
+          <img src="assets/icon-plus.svg">
+          New Invoice
+        </button>
+      </div>
+    </div>
+
+    <div id="conteudo-principal">
+      <div id="conteudo-vazio">
+        <img src="assets/illustration-empty.svg" alt="Empty">
+        <h3>There is nothing here</h3>
+        <div class="paragrafo">
+          <p>Create an invoice by clicking the New Invoice button and get started</p>
+        </div>
+      </div>
+      <div id="conteudo-invoices">
+      </div>
+    </div>
+  </main>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

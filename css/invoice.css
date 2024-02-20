@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+body {
+    display: flex;
+    margin: 0px;
+    background-color: #f8f8fb;
+    font-family: League Spartan;
+}
+aside {
+    background-color: #373b53;
+    border-radius: 0px 20px 18px 0px;
+    justify-content: space-between;
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+}
+aside, #logo {
+    width: 103px;
+}
+#logo {
+    height: 103px;
+    background-color: #795af4;
+    border-radius: 0px 18px 18px 0px;
+}
+#logo img {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    height: 40px;
+    z-index: 500;
+}
+aside, #side-bot, .img-usuario, .status-invoice, .go-back, .conteiner-top, .titulo-lista-item, .lista-items  {
+    display: flex;
+}
+.go-back, .conteiner-top, .status-invoice {
+    align-items: center;
+}
+.status-invoice, .go-back {
+    gap: 20px;
+}
+.go-back {
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+aside, #side-bot  {
+    flex-direction: column;
+}
+#side-bot {
+    gap: 20px;
+    align-items: center;
+}
+.img-usuario {
+    justify-content: center;
+}
+.img-usuario {
+    border-top: 1px solid #494E6E;
+    padding: 20px 0px;
+    width: 100%;
+}
+.img-usuario img {
+    width: 40px;
+    border-radius: 20px;
+}
+main {
+    padding: 77px 0px;
+    margin: 0px auto;
+    width: 730px;
+}
+.conteiner-top {
+    height: 88px;
+    padding: 0px 30px;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.conteiner-info-invoice, .conteiner-top {
+    background-color: white;
+    border-radius: 8px;
+}
+.conteiner-info-invoice {
+    padding: 40px;
+}
+button {
+    padding: 0px 24px;
+}
+.botao-edit {
+    background-color: #f9fafe;
+    color: #9277ff;
+}
+.botao-edit, .botao-delete, .botao-marcar-pago {
+    height: 48px;
+    border-radius: 30px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.botao-delete, .botao-marcar-pago {
+    color: white;
+}
+.botao-edit:hover {
+    background-color: #dfe3fa;
+}
+.botao-delete {
+    background-color: #ec5757;
+}
+.botao-delete:hover {
+    background-color: #ff9797;
+}
+.botao-marcar-pago {
+    background-color: #7c5dfa;
+}
+.botao-marcar-pago:hover {
+    background-color: #9277ff;
+}
+.conteiner-status {
+    display: flex;
+    width: 104px;
+    height: 40px;
+    align-items: center;
+    background: #f3fdfa;
+    justify-content: center;
+    border-radius: 5px;
+}
+.conteiner-status li {
+    font-size: 25px;
+    width: 15px;
+}
+.conteiner-botoes button {
+    margin-left: 5px;
+}
+.cl-gray {
+    font-size: 13px;
+    color: #7e88c3;
+    font-weight: 500;
+}
+.cl-black {
+    font-size: 15px;
+    color: black;
+}
+.go-back h5:hover {
+    color: #7e88c3;
+}
+.go-back h5 {
+    margin: 0px;
+}
+.endereco-remetente-invoice {
+    text-align: end;
+}
+.endereco-remetente-invoice h5, .info-client h5 {
+    margin: 0px 0px 10px 0px;
+}
+.info-parte-1 {
+    display: flex;
+    justify-content: space-between;
+}
+.info-parte-2 {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 40px;
+}
+.info-parte-3 {
+    background-color: #f9fafe;
+    border-radius: 10px;
+}
+.id-invoice {
+    margin: 0px 0px 15px 0px;
+}
+.descricao-invoice {
+    margin: 0px;
+}
+.data-fatura, .titulo-lista-item {
+    margin-bottom: 35px;
+}
+.datas-invoice {
+    width: 100px;
+}
+.conta-para {
+    width: 120px;
+}
+.nome-item, .item-name {
+    width: 280px;
+}
+.quantidade-item, .item-quantity {
+    width: 40px;
+    text-align: center;
+}
+.preco-item, .valor-total-item, .item-price, .invoice-total {
+    width: 135px;
+    text-align: end;
+}
+.titulo-lista-item h5, .lista-items h5, #conteiner-soma-items h5, h3 {
+    margin: 0px;
+}
+.lista-items h5 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.lista-items {
+    margin-top: 30px;
+}
+#conteudo-items, #conteiner-soma-items {
+    padding: 30px;
+}
+#conteiner-soma-items {
+    background-color: #373b53;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.soma-items {
+    font-size: 24px;
+    font-weight: bold;
+}
+#conteiner-soma-items h5 {
+    font-weight: 400;
+}

@@ -1,0 +1,83 @@
+#conteudo-nova-fatura
+left: 160px;
+
+<div class="bloco-invoice">
+          <h4 class="id-invoice">#<strong>RT3080</strong></h4>
+          <h5 class="paymentDue">Due 19 Aug 2021</h5>
+          <h5 class="clientName">Jensen Huang</h5>
+          <h4 class="invoice-total">£ 1,800.90</h4>
+          <div class="conteiner-status">
+            <li></li>
+            <h4 class="status-invoice">Paid</h4>
+          </div>
+          <img src="assets/icon-arrow-right.svg">
+        </div>
+
+
+  <!-- Add clientEmail -->
+
+  Item Name
+  QTY.
+  Price
+  Total
+
+  <!-- Add item.name -->
+  <!-- Add item.quanity -->
+  <!-- Add item.price -->
+  <!-- Add item.total -->
+
+  Amount Due
+  £ <!-- Add total -->
+
+  <!-- Edit invoice form -->
+  Go back
+
+  Edit #<!-- Add id -->
+
+  Bill From
+  
+  Street Address
+  City
+  Post Code
+  Country
+  
+  Bill To
+  
+  Client's Name
+  Client's Email
+  Street Address
+  City
+  Post Code
+  Country
+  
+  Invoice Date
+  
+  Payment Terms
+  Net 1 day
+  Net 7 days
+  Net 14 days
+  Net 30 days
+  
+  Project Description
+  
+  Item List
+  
+  Item Name
+  Qty.
+  Price
+  Total
+  
+  Add New Item
+
+  Cancel
+  Save Changes
+  <!-- Edit invoice end -->
+
+  <!-- Delete Modal -->
+  Confirm Deletion
+  Are you sure you want to delete invoice #<!-- Add id -->? 
+  This action cannot be undone.
+
+  Cancel
+  Delete
+  <!-- Delete Modal end -->

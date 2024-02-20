@@ -1,0 +1,414 @@
+#conteudo-vazio {
+    display: none;
+}
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    background-color: #f8f8fb;
+    font-family: League Spartan;
+}
+aside {
+    background-color: #373b53;
+    border-radius: 0px 20px 18px 0px;
+    justify-content: space-between;
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+}
+aside, #logo {
+    width: 103px;
+}
+#logo {
+    height: 103px;
+    background-color: #795af4;
+    border-radius: 0px 18px 18px 0px;
+}
+#logo img {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    height: 40px;
+    z-index: 500;
+}
+#conteiner-nova-fatura {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    display: none;
+}
+#conteiner-lista-item h3 {
+    margin: 45px 0px 0px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777F98;
+}
+#criar-nova-fatura {
+    width: 719px;
+    background-color: white;
+    border-radius: 0px 18px 18px 0px;
+    height: 100%;
+    position: fixed;
+    left: -618px;
+    transition: .5s ease;
+    opacity: 1;
+}
+#conteudo-nova-fatura {
+    height: 95%;
+    width: 519px;
+    left: -500px;
+    top: 70px;
+    position: fixed;
+    transition: .5s ease;
+    opacity: 1;
+}
+#conteudo-nova-fatura h2 {
+    margin: 0px 0px 40px 0px;
+    font-size: 23px;
+}
+form {
+    overflow-x: hidden;
+    height: 80%;
+    padding-right: 15px;
+}
+form::-webkit-scrollbar-thumb {
+    background-color: #dfe3fa;
+    border-radius: 15px;
+}
+::-webkit-scrollbar {
+    background-color: white;
+    width: 8px;
+    border-radius: 10px;
+}
+legend {
+    margin-bottom: 25px;
+    padding: 0px;
+    color:#795af4;
+    font-size: 15px;
+    font-weight: bold;
+}
+.label-input-criar-fatura label, .titulo-lista-item h5{
+    color: #9277ff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.titulo-lista-item {
+    gap: 15px;
+}
+.trio-endereco, .duo-preenchimento {
+    gap: 25px;
+}
+.trio-endereco input {
+    width: 129.5px;
+}
+.duo-preenchimento input {
+    width: 203px;
+}
+.duo-preenchimento select {
+    width: 236px;
+}
+#conta-de, #conta-para, .trio-endereco {
+    margin-bottom: 25px;
+}
+select {
+    appearance: none;
+    background-image: url('../assets/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 208px 15px;
+}
+select:hover {
+    border-color: #9d85fb;
+}
+.label-input-criar-fatura input, select, .novo-item input {
+    border: 1px solid #e3e7fb;
+    border-radius: 3px;
+    height: 38px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+input:focus-visible, select:focus-visible {
+    outline: none;
+}
+.label-input-criar-fatura {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.sub-background {
+    background-color: #9277ff;
+    width: 103px;
+    height: 52px;
+    position: relative;
+    top: 7px;
+    border-radius: 18px 0px 18px 0px;
+}
+aside, #side-bot, .paragrafo, .img-usuario, .label-input-criar-fatura, .trio-endereco, .duo-preenchimento, .titulo-lista-item  {
+    display: flex;
+}
+aside, #side-bot, .label-input-criar-fatura  {
+    flex-direction: column;
+}
+#side-bot {
+    gap: 20px;
+    align-items: center;
+}
+.img-usuario, .paragrafo {
+    justify-content: center;
+}
+.img-usuario {
+    border-top: 1px solid #494E6E;
+    padding: 20px 0px;
+    width: 100%;
+}
+.img-usuario img {
+    width: 40px;
+    border-radius: 20px;
+}
+main {
+    padding: 77px 0px;
+    margin: 0px auto;
+}
+#conteudo-top {
+    width: 730px;
+    justify-content: space-between;
+}
+#conteudo-top, .filtro, .status-filtro {
+    display: flex;
+    align-items: center;
+}
+.conteudo-top-esquerdo h2{
+    font-size: 33px;
+    margin: 0px;
+}
+.conteudo-top-esquerdo h6{
+    margin: 7px 0px 0px 0px;
+    font-weight: 400;
+}
+.conteudo-top-esquerdo h6, #conteudo-vazio p {
+    color: rgb(161, 161, 161);
+    font-size: 13px;
+}
+#conteudo-vazio p {
+    width: 193px;
+    margin: 0px;
+}
+.status-filtro {
+    gap: 10px;
+    cursor: pointer;
+}
+.filtro {
+    flex-direction: column;
+}
+.filtro h5 {
+    margin: 0px;
+}
+.filtro img {
+    width: 10px;
+    height: 6px;
+}
+.nova-fatura img{
+    background: white;
+    padding: 9px;
+    border-radius: 15px;
+    height: 9px;
+}
+.nova-fatura {
+    border: 0px;
+    height: 40px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 25px;
+    
+}
+.nova-fatura, #save-send {
+    color: white;
+    background-color: #7c5dfa;
+}
+.nova-fatura:hover, #save-send:hover {
+    background-color: #9277ff;
+}
+.nova-fatura, .lista-filtros label, .lista-filtros input, select, .img-delete {
+    cursor: pointer;
+}
+.conteudo-top-direito {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.lista-filtros label{
+    font-weight: bold;
+    font-size: 15px;
+}
+.lista-filtros div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 7px;
+}
+.lista-filtros {
+    width: 140px;
+    height: 70px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    top: 130px;
+    display: none;
+    box-shadow: 0px 10px 25px -10px lightslategray;
+}
+.arrow-up {
+    transform: rotate(180deg);
+    margin-bottom: 2px;
+}
+#conteudo-vazio {
+    width: 241px;
+    height: 342px;
+    text-align: center;
+    padding: 140px 0px 0px 232px;
+}
+.nome-item {
+    width: 180px;
+}
+.quantidade-item {
+    width: 50px;
+}
+.preco-item {
+    width: 120px;
+}
+.input-nome {
+    width: 162px;
+}
+.input-quantidade {
+    width: 32px;
+}
+.input-preco {
+    width: 102px;
+}
+.novo-item {
+    margin-bottom: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.img-delete {
+    margin-bottom: 5px;
+}
+.soma-valor-total {
+    margin: 0px;
+    width: 73px;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input[type="date" i], select {
+    padding-right: 15px;
+}
+option {
+    border-bottom: 1px solid gray;
+    margin: 10px;
+}
+#button-add-novo-item {
+    width: 100%;
+}
+#button-add-novo-item, #botao-discard {
+    background-color: #f9fafe;
+    color: #9277ff;
+}
+#button-add-novo-item:hover, #botao-discard:hover {
+    background-color: #dfe3fa;
+}
+#button-add-novo-item, .botoes-final-form button {
+    height: 48px;
+    border-radius: 30px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#conteiner-final-formulario {
+    height: 110px;
+    width: 719px;
+    position: relative;
+    left: -160px;
+    background-color: white;
+    border-radius: 0px 18px 18px 0px;
+    /* box-shadow: 0px -53px 100px -51px; */
+}
+.botoes-final-form {
+    width: 495px;
+    left: 160px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 40px;
+}
+.botoes-final-form button {
+    padding: 0px 24px;
+}
+#save-draft {
+    background-color: #373b53;
+    color: #888eb0;
+}
+#save-draft:hover {
+    background-color: #0c0e16;
+}
+
+#conteudo-invoices {
+    padding: 50px 0px;
+}
+.bloco-invoice {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding-left: 30px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    cursor: pointer;
+    height: 72px;
+}
+.id-invoice, .paymentDue, .clientName {
+    color: rgb(161, 161, 161);
+    font-weight: 400;
+}
+.clientName {
+    width: 100px;
+}
+.id-invoice strong {
+    color: black;
+}
+.id-invoice, .invoice-total {
+    font-size: 15px;
+}
+.conteiner-status {
+    display: flex;
+    width: 104px;
+    height: 40px;
+    align-items: center;
+    background: #f3fdfa;
+    justify-content: center;
+    border-radius: 5px;
+}
+.conteiner-status li {
+    font-size: 25px;
+    width: 15px;
+}
+.paymentDue {
+    width: 95px;
+}
+.invoice-total {
+    width: 140px;
+    text-align: end;
+}
+.bloco-invoice img {
+    position: relative;
+    right: 20px;
+}
+.id-invoice {
+    width: 70px;
+}
