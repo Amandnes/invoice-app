@@ -1,4 +1,4 @@
-#conteudo-vazio {
+#conteudo-vazio, #conteiner-invoice {
     display: none;
 }
 @font-face {
@@ -13,7 +13,7 @@ body {
     font-family: League Spartan;
 }
 aside {
-    background-color: #373b53;
+    background-color: #1e2139;
     border-radius: 0px 20px 18px 0px;
     justify-content: space-between;
     z-index: 3;
@@ -77,11 +77,10 @@ form {
     padding-right: 15px;
 }
 form::-webkit-scrollbar-thumb {
-    background-color: #dfe3fa;
+    background-color: #0024f61c;
     border-radius: 15px;
 }
 ::-webkit-scrollbar {
-    background-color: white;
     width: 8px;
     border-radius: 10px;
 }
@@ -115,17 +114,8 @@ legend {
 #conta-de, #conta-para, .trio-endereco {
     margin-bottom: 25px;
 }
-select {
-    appearance: none;
-    background-image: url('../assets/icon-arrow-down.svg');
-    background-repeat: no-repeat;
-    background-position: 208px 15px;
-}
-select:hover {
-    border-color: #9d85fb;
-}
-.label-input-criar-fatura input, select, .novo-item input {
-    border: 1px solid #e3e7fb;
+.label-input-criar-fatura input, .novo-item input {
+    border: 1px solid #0029f717;
     border-radius: 3px;
     height: 38px;
     padding-left: 15px;
@@ -169,8 +159,9 @@ aside, #side-bot, .label-input-criar-fatura  {
     border-radius: 20px;
 }
 main {
-    padding: 77px 0px;
+    padding: 77px 50px 77px 135px;
     margin: 0px auto;
+    width: 730px;
 }
 #conteudo-top {
     width: 730px;
@@ -226,14 +217,14 @@ main {
     border-radius: 25px;
     
 }
-.nova-fatura, #save-send {
+.nova-fatura, #save-send, button#save-changes {
     color: white;
     background-color: #7c5dfa;
 }
-.nova-fatura:hover, #save-send:hover {
+.nova-fatura:hover, #save-send:hover, button#save-changes:hover {
     background-color: #9277ff;
 }
-.nova-fatura, .lista-filtros label, .lista-filtros input, select, .img-delete {
+.nova-fatura, .lista-filtros label, .lista-filtros input, select, .img-delete, #tema {
     cursor: pointer;
 }
 .conteudo-top-direito {
@@ -306,7 +297,7 @@ main {
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
-input[type="date" i], select {
+input[type="date" i] {
     padding-right: 15px;
 }
 option {
@@ -315,12 +306,14 @@ option {
 }
 #button-add-novo-item {
     width: 100%;
+    background-color: #acb7fb2b;
+    color: #9277ff;
 }
-#button-add-novo-item, #botao-discard {
+#botao-discard, button#cancel {
     background-color: #f9fafe;
     color: #9277ff;
 }
-#button-add-novo-item:hover, #botao-discard:hover {
+#button-add-novo-item:hover, #botao-discard:hover, button#cancel:hover {
     background-color: #dfe3fa;
 }
 #button-add-novo-item, .botoes-final-form button {
@@ -330,18 +323,8 @@ option {
     font-weight: bold;
     cursor: pointer;
 }
-#conteiner-final-formulario {
-    height: 110px;
-    width: 719px;
-    position: relative;
-    left: -160px;
-    background-color: white;
-    border-radius: 0px 18px 18px 0px;
-    /* box-shadow: 0px -53px 100px -51px; */
-}
 .botoes-final-form {
     width: 495px;
-    left: 160px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -376,6 +359,9 @@ option {
     color: rgb(161, 161, 161);
     font-weight: 400;
 }
+.bloco-invoice .paymentDue {
+    width: 110px;
+}
 .clientName {
     width: 100px;
 }
@@ -390,7 +376,6 @@ option {
     width: 104px;
     height: 40px;
     align-items: center;
-    background: #f3fdfa;
     justify-content: center;
     border-radius: 5px;
 }
@@ -398,12 +383,8 @@ option {
     font-size: 25px;
     width: 15px;
 }
-.paymentDue {
+.paymentDue2 {
     width: 95px;
-}
-.invoice-total {
-    width: 140px;
-    text-align: end;
 }
 .bloco-invoice img {
     position: relative;
@@ -411,4 +392,226 @@ option {
 }
 .id-invoice {
     width: 70px;
+}
+a {
+    text-decoration: none;
+}
+
+
+#conteiner-status-invoice, .go-back, .conteiner-top, .titulo-lista-item-invoice, .lista-items-invoice  {
+    display: flex;
+}
+.go-back, .conteiner-top, #conteiner-status-invoice {
+    align-items: center;
+}
+#conteiner-status-invoice, .go-back {
+    gap: 20px;
+}
+.go-back {
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 85px;
+}
+.conteiner-top {
+    height: 88px;
+    padding: 0px 30px;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.conteiner-info-invoice, .conteiner-top {
+    background-color: white;
+    border-radius: 8px;
+}
+.conteiner-info-invoice {
+    padding: 40px;
+}
+.conteiner-botoes button {
+    padding: 0px 24px;
+}
+.botao-edit {
+    background-color: #f9fafe;
+    color: #9277ff;
+}
+.botao-edit, .botao-delete, .botao-marcar-pago {
+    height: 48px;
+    border-radius: 30px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.botao-delete, .botao-marcar-pago {
+    color: white;
+}
+.botao-edit:hover {
+    background-color: #dfe3fa;
+}
+.botao-delete {
+    background-color: #ec5757;
+}
+.botao-delete:hover {
+    background-color: #ff9797;
+}
+.botao-marcar-pago {
+    background-color: #7c5dfa;
+}
+.botao-marcar-pago:hover {
+    background-color: #9277ff;
+}
+.conteiner-status2 {
+    display: flex;
+    width: 104px;
+    height: 40px;
+    align-items: center;
+    background: #f3fdfa;
+    justify-content: center;
+    border-radius: 5px;
+}
+.conteiner-status2 li {
+    font-size: 25px;
+    width: 15px;
+}
+.conteiner-botoes button {
+    margin-left: 5px;
+}
+.cl-gray {
+    font-size: 13px;
+    color: rgb(161, 161, 161);
+    font-weight: 500;
+}
+.cl-black {
+    font-size: 15px;
+    color: black;
+}
+.go-back h5:hover {
+    color: rgb(161, 161, 161);
+}
+.go-back h5 {
+    margin: 0px;
+}
+.endereco-remetente-invoice {
+    text-align: end;
+}
+.endereco-remetente-invoice h5, .info-client h5 {
+    margin: 0px 0px 10px 0px;
+}
+.info-parte-1 {
+    display: flex;
+    justify-content: space-between;
+}
+.info-parte-2 {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 40px;
+}
+.id-invoice2 {
+    margin: 0px 0px 15px 0px;
+}
+.descricao-invoice {
+    margin: 0px;
+}
+.data-fatura, .titulo-lista-item-invoice {
+    margin-bottom: 35px;
+}
+.datas-invoice {
+    width: 100px;
+}
+.conta-para {
+    width: 120px;
+}
+.nome-item2, .item-name {
+    width: 280px;
+}
+.quantidade-item2, .item-quantity {
+    width: 40px;
+    text-align: center;
+}
+.preco-item2, .valor-total-item2, .item-price, .invoice-total {
+    width: 135px;
+    text-align: end;
+}
+.titulo-lista-item-invoice h5, .lista-items-invoice h5, #conteiner-soma-items h5, h3 {
+    margin: 0px;
+}
+.lista-items-invoice h5 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.lista-items-invoice {
+    margin-top: 30px;
+}
+#conteudo-items, #conteiner-soma-items {
+    padding: 30px;
+}
+#conteudo-items {
+    background-color: rgb(0 28 253 / 5%);
+    border-radius: 10px 10px 0px 0px;
+}
+#conteiner-soma-items {
+    background-color: #373b53;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.soma-items {
+    font-size: 24px;
+    font-weight: bold;
+}
+#conteiner-soma-items h5 {
+    font-weight: 400;
+}
+
+[bck-dark] {
+    background-color: #1e2139;
+    box-shadow: 0px 10px 25px -10px #060606;
+}
+.fundo-form-dark {
+    background-color: rgb(20, 22, 37);
+}
+input {
+    background-color: rgba(255, 255, 255, 0.082);
+}
+input#date {
+    width: 217px;
+}
+input#terms {
+    width: 235px;
+    height: 42px;
+    text-align: left;
+    cursor: pointer;
+    background-image: url('../assets/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: 208px 18px;
+}
+input#terms:hover {
+    border-color: #7C5DFA;
+}
+ul#payment-terms {
+    list-style-type: none;
+    margin-block-start: 1em;
+    padding-left: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px -2px lightgray;
+    position: absolute;
+    top: 55px;
+    background-color: white;
+    width: 100%;
+    display: none;
+}
+#payment-terms li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+#payment-terms li:hover {
+    color: #7C5DFA;
+}
+[b-btt] {
+    border-bottom: 1px solid lightgray;
+}
+.select {
+    position: relative;
+}
+button#cancel, button#save-changes {
+    display: none;
 }

@@ -68,21 +68,28 @@
             <div class="duo-preenchimento">
               <div class="label-input-criar-fatura">
                 <label for="text">Invoice Date</label>
-                <input type="date" id="date">
+                <input type="text" id="date" placeholder="dd/mm/aaaa">
               </div>
-              <div class="label-input-criar-fatura">
+              <div class="label-input-criar-fatura select">
                 <label for="text">Payment Terms</label>
-                <select name="select" id="payment-terms">
+                <input type="button" value="Net 1 days" id="terms">
+                <ul id="payment-terms">
+                  <li b-btt>Net 1 days</li>
+                  <li b-btt>Net 7 days</li>
+                  <li b-btt>Net 14 days</li>
+                  <li>Net 30 days</li>
+                </ul>
+                <!-- <select name="select" id="payment-terms">
                   <option value="1">Net 1 days</option>
                   <option value="7">Net 7 days</option>
                   <option value="14">Net 14 days</option>
                   <option value="30">Net 30 days</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <div class="label-input-criar-fatura">
               <label for="text">Project Description</label>
-              <input type="text" placeholder="e.g. Graphic Design Service">
+              <input type="text" id="description" placeholder="e.g. Graphic Design Service">
             </div>
           </div>
 
@@ -103,11 +110,13 @@
           </div>
           <div id="conteiner-final-formulario">
             <div class="botoes-final-form">
-              <button id="botao-discard" type="button">Discard</button>
+              <button id="botao-discard" type="reset">Discard</button>
               <div class="botoes-save">
                 <button id="save-draft" type="submit">Save as Draft</button>
-                <button id="save-send" type="submit">Save & Send</button>
+                <button id="save-send" type="submit" onclick="enviarFormulario()">Save & Send</button>
               </div>
+              <button id="cancel" type="button">Cancel</button>
+              <button id="save-changes" type="button">Save Changes</button>
             </div>
           </div>
         </form>
@@ -120,56 +129,131 @@
         <div class="sub-background"></div>
       </div>
       <div id="side-bot">
-        <img src="assets/icon-moon.svg" alt="icon-moon">
+        <img src="assets/icon-moon.svg" alt="icon-moon" id="tema">
         <div class="img-usuario">
           <img src="assets/image-avatar.jpg">
         </div>
       </div>
     </aside>
   <main>
-    <div id="conteudo-top">
-      <div class="conteudo-top-esquerdo">
-        <h2>Invoices</h2>
-        <h6 id="qtd-invoices">No invoices</h6>
-      </div>
-
-      <div class="conteudo-top-direito">
-        <div class="filtro">
-          <div class="status-filtro">
-            <h5>Filter by status</h5>
-            <img src="assets/icon-arrow-down.svg" class="icon-arrow">
+    <div id="conteiner-pagina-principal">
+      <div id="conteudo-top">
+        <div class="conteudo-top-esquerdo">
+          <h2>Invoices</h2>
+          <h6 id="qtd-invoices">No invoices</h6>
+        </div>
+  
+        <div class="conteudo-top-direito">
+          <div class="filtro">
+            <div class="status-filtro">
+              <h5>Filter by status</h5>
+              <img src="assets/icon-arrow-down.svg" class="icon-arrow">
+            </div>
+            <div class="lista-filtros">
+             <div class="draft fil">
+              <input type="checkbox" name="draft" id="draft">
+              <label for="draft">Draft</label>
+             </div> 
+             <div class="pending fil">
+              <input type="checkbox" name="pending" id="pending">
+              <label for="pending">Pending</label>
+             </div> 
+             <div class="paid fil">
+              <input type="checkbox" name="paid" id="paid">
+              <label for="paid">Paid</label>
+             </div> 
+            </div>
           </div>
-          <div class="lista-filtros">
-           <div id="draft">
-            <input type="checkbox" name="draft" id="draft">
-            <label for="draft">Draft</label>
-           </div> 
-           <div id="pending">
-            <input type="checkbox" name="pending" id="pending">
-            <label for="pending">Pending</label>
-           </div> 
-           <div id="paid">
-            <input type="checkbox" name="paid" id="paid">
-            <label for="paid">Paid</label>
-           </div> 
+          <button class="nova-fatura">
+            <img src="assets/icon-plus.svg">
+            New Invoice
+          </button>
+        </div>
+      </div>
+      <div id="conteudo-principal">
+        <div id="conteudo-vazio">
+          <img src="assets/illustration-empty.svg" alt="Empty">
+          <h3>There is nothing here</h3>
+          <div class="paragrafo">
+            <p>Create an invoice by clicking the New Invoice button and get started</p>
           </div>
         </div>
-        <button class="nova-fatura">
-          <img src="assets/icon-plus.svg">
-          New Invoice
-        </button>
+        <div id="conteudo-invoices">
+        </div>
       </div>
     </div>
-
-    <div id="conteudo-principal">
-      <div id="conteudo-vazio">
-        <img src="assets/illustration-empty.svg" alt="Empty">
-        <h3>There is nothing here</h3>
-        <div class="paragrafo">
-          <p>Create an invoice by clicking the New Invoice button and get started</p>
+    <div id="conteiner-invoice">
+      <div class="go-back">
+        <img src="assets/icon-arrow-left.svg">
+        <h5 class="cl-black">Go back</h5>
+      </div>
+      <div class="conteiner-top">
+        <div id="conteiner-status-invoice">
+          <h5 class="cl-gray">Status</h5>
+          <div class="conteiner-status2">
+            <li></li>
+            <h4 class="status-invoice2">Paid</h4>
+          </div>
+        </div>
+        <div class="conteiner-botoes">
+          <button class="botao-edit" type="button">Edit</button>
+          <button class="botao-delete">Delete</button>
+          <button class="botao-marcar-pago" type="button">Mark as Paid</button>
         </div>
       </div>
-      <div id="conteudo-invoices">
+      <div class="conteiner-info-invoice">
+        <div class="info-parte-1">
+          <div class="id-descricao-invoice">
+            <h4 class="id-invoice2 cl-gray">#<strong class="cl-black">RT3080</strong></h4>
+            <h5 class="descricao-invoice cl-gray">Graphic Design</h5>
+          </div>
+          <div class="endereco-remetente-invoice">
+            <h5 class="sender-street cl-gray">19 Union Terrace</h5>
+            <h5 class="sender-city cl-gray">London</h5>
+            <h5 class="sender-postCode cl-gray">E1 3EZ</h5>
+            <h5 class="sender-country cl-gray">United Kingdom</h5>
+          </div>
+        </div>
+        <div class="info-parte-2">
+          <div class="datas-invoice">
+            <div class="data-fatura">
+              <h5 class="cl-gray">Invoice Date</h5>
+              <h5 class="invoice-date cl-black"></h5>
+            </div>
+            <div class="data-pagamento">
+              <h5 class="cl-gray">Payment Due</h5>
+              <h5 class="paymentDue2 cl-black"></h5>
+            </div>
+          </div>
+          <div class="conta-para">
+            <h5 class="cl-gray">Bill To</h5>
+            <div class="info-client">
+              <h5 class="clientName2 cl-black">Alex Grim</h5>
+              <h5 class="client-street cl-gray">84 Church Way</h5>
+              <h5 class="client-city cl-gray">Bradford</h5>
+              <h5 class="client-postCode cl-gray">BD1 9PB</h5>
+              <h5 class="client-country cl-gray">United Kingdom</h5>
+            </div>
+          </div>
+          <div class="enviado-para">
+            <h5 class="cl-gray">Sent To</h5>
+            <h5 class="client-email cl-black">alexgrim@mail.com</h5>
+          </div>
+        </div>
+        <div class="info-parte-3">
+          <div id="conteudo-items">
+            <div class="titulo-lista-item-invoice">
+              <h5 class="nome-item2 cl-gray">Item Name</h5>
+              <h5 class="quantidade-item2 cl-gray">Qty.</h5>
+              <h5 class="preco-item2 cl-gray">Price</h5>
+              <h5 class="valor-total-item2 cl-gray">Total</h5>
+            </div>
+          </div>
+          <div id="conteiner-soma-items">
+            <h5>Amount Due</h5>
+            <h3 class="soma-items">0</h3>
+          </div>
+        </div>
       </div>
     </div>
   </main>
