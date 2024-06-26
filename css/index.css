@@ -17,8 +17,8 @@ aside {
     border-radius: 0px 20px 18px 0px;
     justify-content: space-between;
     z-index: 3;
-    height: 100vh;
     position: fixed;
+    height: 100%;
 }
 aside, #logo {
     width: 103px;
